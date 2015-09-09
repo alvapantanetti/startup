@@ -1,0 +1,44 @@
+.anyname {
+    background-color: aliceblue;
+}
+
+* {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+body > header, body > footer {
+    text-align: center;
+}
+
+.header {
+    font-size: 46px;
+}
+
+.footer {
+    font-size: 10px;
+}
+
+.sidebar {
+    font-size: 10px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.navigation {
+    font-size: 12px;
+}
+
+[class$="r"] {
+    background: magenta;
+}
+
+[class*="a"]:not([class$="r"]){
+    background: blue;
+}
+
+.navigation, .content, .sidebar {
+    display: inline-block;
+}
