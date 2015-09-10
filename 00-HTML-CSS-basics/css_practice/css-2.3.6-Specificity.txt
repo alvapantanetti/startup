@@ -1,0 +1,14 @@
+Using the following css:
+
+* {
+    font: Verdana, Arial, 'sans-serif' !important; <!-- fonts -->
+}
+
+The * selector means any/all elements, but will obviously be on
+the bottom of the food chain when it comes to overriding more specific selectors.
+
+The !important flag will render the font-style for * to be absolute, even if other
+selector have been used to set the text.
+
+the !important flag would prevent other selectors from overriding, as long as they
+don't also use it.
