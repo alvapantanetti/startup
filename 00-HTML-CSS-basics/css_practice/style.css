@@ -2,12 +2,12 @@
     background-color: aliceblue;
 }
 
-* {
+html {
     font-size: 14px;
     font-family: sans-serif;
 }
 
-body > header, body > footer {
+header, footer {
     text-align: center;
 }
 
