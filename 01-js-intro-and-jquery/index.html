@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>JS page test</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header>
@@ -15,14 +15,24 @@
     </nav>
     <section class="content">
         <header>
-            Section header place
+            <h2>Section header place</h2>
         </header>
         <article>
-            Section Article place
+            <h4>Section Article place</h4>
+            <p class="fade-in-paragraph">
+              Hello world!
+            </p>
+            <p class="query-response"></p>
         </article>
         <footer>
             Section Footer place
         </footer>
+        <button type="button" class="my-name-query query-buttons">My name query</button>
+        <button type="button" class="spotify-query query-buttons">Spotify query</button>
+    </section>
+    <section class="spotify-response">
+        <h4>Albums</h4>
+    <!--Place to nest the albums-->
     </section>
     <aside class="sidebar" >
       <h3>Aside place</h3>
@@ -30,5 +40,7 @@
     <footer>
       <h3>Footer place</h3>
     </footer>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
