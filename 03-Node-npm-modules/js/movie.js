@@ -1,6 +1,6 @@
 var Director = require('./director');
 
-var Movie = function (title,year) {
+var Movie = function (title, year) {
     this.title = title;
     this.year = year;
 };
