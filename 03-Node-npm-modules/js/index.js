@@ -22,7 +22,8 @@ Director.prototype = {
 
     speak: function () {
         var index = 0;
-        for (index; index < this.quotes.length; index +=1) {
+        
+        for (index; index < this.quotes.length; index += 1) {
             console.log(this.name + ' says: ' + '\"' + this.quotes[index] + '\"' );
         }
     }
