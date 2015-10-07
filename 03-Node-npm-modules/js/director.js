@@ -1,7 +1,6 @@
 var Director = function (name) {
     this.name = name;
     this.quotes = [];
-
 };
 
 Director.prototype = {
