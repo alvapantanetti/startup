@@ -1,6 +1,7 @@
 var React = require ('react');
 
 var Button = React.createClass({
+
     propTypes: {
         onClick: React.PropTypes.func.isRequired
     },
