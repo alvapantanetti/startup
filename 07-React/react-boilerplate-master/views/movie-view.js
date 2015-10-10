@@ -1,11 +1,11 @@
 var React = require ('react');
 var _ = require ('lodash');
 var Movie = require ('../lib/movie');
-var MovieTable = require ('../components/movietable');
+var MovieTable = require ('../components/movie-table');
 var Input = require ('../components/input');
 var Button = require ('../components/button');
 
-var MovieCRUD = React.createClass ({
+var MovieView= React.createClass ({
 
     getInitialState: function () {
         return {
@@ -19,10 +19,10 @@ var MovieCRUD = React.createClass ({
         return (
             <div>
                 <h1>Movie DataBase</h1>
-                <Input label='Title' onChange={this.handleInputChange.bind(this, 'title')}/>
-                <Input label='Year' onChange={this.handleInputChange.bind(this, 'year')}/>
+                <Input label='Title' onChange={this.handleInputChange.bind (this, 'title')} />
+                <Input label='Year' onChange={this.handleInputChange.bind (this, 'year')} />
                 <Button {...this.getButtonProps()}>New Movie!</Button>
-                <MovieTable movies={this.state.movies} onDeleteMovie={this.handleDeleteMovie}/>
+                <MovieTable movies={this.state.movies} onDeleteMovie={this.handleDeleteMovie} />
             </div>
         );
     },
@@ -56,4 +56,4 @@ var MovieCRUD = React.createClass ({
     }
 });
 
-module.exports = MovieCRUD;
+module.exports = MovieView;

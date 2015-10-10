@@ -1,9 +1,10 @@
 var React = require ('react');
+var _ = require ('lodash');
 
 var Button = React.createClass({
 
     propTypes: {
-        onClick: React.PropTypes.func.isRequired
+        onClick: React.PropTypes.func
     },
 
     render: function () {
@@ -19,7 +20,9 @@ var Button = React.createClass({
     },
 
     handleOnClick: function (event) {
-        this.props.onClick(event);
+        if (this.props.onClick){
+            this.props.onClick(event)
+        }
     }
 });
 

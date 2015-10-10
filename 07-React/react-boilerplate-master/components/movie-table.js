@@ -45,7 +45,6 @@ var MovieTable = React.createClass({
             onClick: this.handleDeleteMovie
         }
     }
-
 });
 
 module.exports = MovieTable;

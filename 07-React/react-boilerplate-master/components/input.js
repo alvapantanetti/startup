@@ -6,16 +6,13 @@ var Input = React.createClass({
     propTypes:{
         defaultValue: React.PropTypes.string,
         onChange: React.PropTypes.func,
-        value: React.PropTypes.oneOfType([
-            React.PropTypes.string,
-            React.PropTypes.number
-        ])
+        value: React.PropTypes.string
     },
 
     getInitialState: function () {
         var initialState = {};
 
-        if ((_.isUndefined(this.props.value))) {
+        if (_.isUndefined(this.props.value)) {
             initialState.value = this.props.defaultValue
         }
 
@@ -25,8 +22,8 @@ var Input = React.createClass({
     render: function () {
         return (
             <div>
-                <span>{this.props.label}</span>
-                <input {...this.getProps()}/>
+                <label>{this.props.label}</label>
+                <input {...this.getProps()} />
             </div>
         );
     },

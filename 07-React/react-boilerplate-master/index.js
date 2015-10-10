@@ -1,4 +1,4 @@
 var React = require ('react');
-var MovieCRUD = require ('./views/moviecrud');
+var MovieView = require ('./views/movie-view');
 
-React.render(<MovieCRUD/>, document.getElementById('mount'));
+React.render(<MovieView/>, document.getElementById('mount'));
