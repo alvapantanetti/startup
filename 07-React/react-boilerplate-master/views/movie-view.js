@@ -36,8 +36,17 @@ var MovieView= React.createClass ({
     handleInputChange: function (type, event) {
         var newState = {};
 
+        //if  (event.target.value == '' ){
+        //    alert ('The value is undefined or empty.');
+        //    console.log('The value is undefined or empty.');
+        //    return false;
+        //}
+        //else {
+        //    ;
+        //}
         newState[type] = event.target.value;
-        this.setState(newState);
+        this.setState(newState)
+
     },
 
     handleNewMovie: function () {
