@@ -6,7 +6,8 @@ var Input = React.createClass({
     propTypes:{
         defaultValue: React.PropTypes.string,
         onChange: React.PropTypes.func,
-        value: React.PropTypes.string
+        value: React.PropTypes.string,
+        type: React.PropTypes.string
     },
 
     getInitialState: function () {

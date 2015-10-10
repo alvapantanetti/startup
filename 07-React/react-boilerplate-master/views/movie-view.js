@@ -19,8 +19,8 @@ var MovieView= React.createClass ({
         return (
             <div>
                 <h1>Movie DataBase</h1>
-                <Input label='Title' onChange={this.handleInputChange.bind (this, 'title')} />
-                <Input label='Year' onChange={this.handleInputChange.bind (this, 'year')} />
+                <Input label='Title' type='text' onChange={this.handleInputChange.bind (this, 'title')} />
+                <Input label='Year' type='text' onChange={this.handleInputChange.bind (this, 'year')} />
                 <Button {...this.getButtonProps()}>New Movie!</Button>
                 <MovieTable movies={this.state.movies} onDeleteMovie={this.handleDeleteMovie} />
             </div>
@@ -36,25 +36,21 @@ var MovieView= React.createClass ({
     handleInputChange: function (type, event) {
         var newState = {};
 
-        //if  (event.target.value == '' ){
-        //    alert ('The value is undefined or empty.');
-        //    console.log('The value is undefined or empty.');
-        //    return false;
-        //}
-        //else {
-        //    ;
-        //}
-        newState[type] = event.target.value;
-        this.setState(newState)
-
+        if  (event.target.value){
+            newState[type] = event.target.value;
+            this.setState(newState);
+        }
     },
 
     handleNewMovie: function () {
         var movie = new Movie(this.state.title, this.state.year);
         var movies = this.state.movies;
 
-        movies.push(movie);
-        this.setState({movies: movies});
+        if(movie.title.length >0 && movie.year.length > 0) {
+            movies.push(movie);
+            this.setState({title: '', year: ''});
+            this.setState({movies: movies});
+        }
     },
 
     handleDeleteMovie: function (index) {
