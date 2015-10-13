@@ -10,7 +10,7 @@ var Button = React.createClass({
     render: function() {
         return(
             <div>
-                <button {...this.getProps()}>{this.props.children}</button>
+                <button type="button" class="btn btn-info" {...this.getProps()}>{this.props.children}</button>
             </div>
         );
     },
