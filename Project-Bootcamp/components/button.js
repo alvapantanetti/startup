@@ -4,13 +4,14 @@ var _ = require('lodash');
 var Button = React.createClass({
 
     propTypes: {
-        onClick: React.PropTypes.func
+        onClick: React.PropTypes.func,
+        value: React.PropTypes.string
     },
 
     render: function() {
         return(
             <div>
-                <button type="button" class="btn btn-info" {...this.getProps()}>{this.props.children}</button>
+                <button {...this.getProps()}>{this.props.value}</button>
             </div>
         );
     },
@@ -23,7 +24,7 @@ var Button = React.createClass({
     },
 
     handleClick: function (event) {
-        if(this.props.onClick){
+        if(this.props.onClick) {
             this.props.onClick(event)
         }
     }
