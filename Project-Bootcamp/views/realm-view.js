@@ -15,14 +15,14 @@ var RealmView = React.createClass ({
     },
 
     render: function () {
-        
+
         return (
             <div>
                 <div>
                     <Button {...this.getButtonProps()} />
                 </div>
                 <div>
-                    <Table rows = {this.state.realms} columns = {['Status', 'Name', 'Type', 'Population']} />
+                    <Table rows={this.state.realms} columns={['status', 'name', 'type', 'population']} />
                 </div>
             </div>
         )

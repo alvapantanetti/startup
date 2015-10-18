@@ -17,7 +17,22 @@ BlizzardAPI.prototype.RealmStatus = function (callback) {
         type: 'get',
         datatype: 'json',
         success: function (response) {
-            callback(response.realms);
+            callback (response.realms);
+        }
+    })
+};
+
+BlizzardAPI.prototype.CharacterInfo = function (realm, name, callback) {
+
+    $.ajax({
+        url: 'https://us.api.battle.net/wow/character/' + this.realm + '/' + this.name
+                                                        + '?fields=stats%2C+items%2C+pvp%2C+guild'
+                                                        + '&locale=' + this.locale + '&apikey=' + this.apikey,
+        type: 'get',
+        datatype: 'json',
+        success: function (response) {
+            console.log(response);
+            callback (response);
         }
     })
 };

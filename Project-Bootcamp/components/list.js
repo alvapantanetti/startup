@@ -8,12 +8,14 @@ var List = React.createClass ({
     },
 
     getDefaultProps: function () {
+
         return {
             items: []
         };
     },
 
     render: function () {
+
         return (
             <ul>
                 {this.props.items.map(this.renderItem)}
@@ -22,6 +24,7 @@ var List = React.createClass ({
     },
 
     renderItem: function (item, index) {
+
         return (
             <li key={index}>{item}</li>
         );

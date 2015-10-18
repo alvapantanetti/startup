@@ -9,6 +9,7 @@ var Table = React.createClass ({
     },
 
     getDefaultProps: function () {
+
         return {
             columns: [],
             rows: []
@@ -16,6 +17,7 @@ var Table = React.createClass ({
     },
 
     render: function () {
+
         return (
             <table className="table table-striped">
                 <thead>
@@ -31,20 +33,23 @@ var Table = React.createClass ({
     },
 
     renderColumn: function (column, index) {
+
         return (
             <th key={index}>{column}</th>
         );
     },
 
     renderRow: function (row, index) {
+
         return (
             <tr key={index}>{this.props.columns.map(this.renderCell.bind(this, row))}</tr>
         );
     },
 
-    renderCell: function (row, column, index) {
+    renderCell: function (row, column, cellIndex) {
+
         return (
-            <td key={index}>{row[column].toString()}</td>
+            <td key={cellIndex}>{row[column].toString()}</td>
         );
     }
 });

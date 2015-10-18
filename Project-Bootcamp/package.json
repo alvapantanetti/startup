@@ -28,6 +28,7 @@
     "inherits": "^2.0.1",
     "keymirror": "^0.1.1",
     "lodash": "^3.10.1",
+    "normalize": "^3.0.3",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
   },

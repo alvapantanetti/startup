@@ -1,4 +1,5 @@
-var React =  require ('react');
-var RealmView = require('./views/realm-view');
+var router = require('./router');
 
-React.render(<RealmView/>, document.getElementById('mount'));
+router.run(document.getElementById('mount'));
+
+
