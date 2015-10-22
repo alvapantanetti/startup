@@ -37,4 +37,30 @@ BlizzardAPI.prototype.CharacterInfo = function (realm, name, callback) {
     })
 };
 
+BlizzardAPI.prototype.ChallengerLeaderboard = function (realm, callback) {
+
+    $.ajax({
+        url: URL_CHALLENGE_HERE,
+        type: 'get',
+        datatype: 'json',
+        success: function (response) {
+            console.log(response);
+            callback (response);
+        }
+    })
+};
+
+BlizzardAPI.prototype.PvPLeaderboard = function (bracket, callback) {
+
+    $.ajax({
+        url: URL_PVP_HERE,
+        type: 'get',
+        datatype: 'json',
+        success: function (response) {
+            console.log(response);
+            callback (response);
+        }
+    })
+}
+
 module.exports = new BlizzardAPI();

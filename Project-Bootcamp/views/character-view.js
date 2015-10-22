@@ -20,7 +20,7 @@ var CharacterView = React.createClass ({
         return (
             <div>
                 <div>
-                    <h3><u>Character Basic Information form</u></h3>
+                    <h3><u>Character basic information form</u></h3>
                     <p>Fill the form with the character name and realm.</p>
                     <Input label='Name' type="text" onChange={this.handleInputChange.bind (this, 'name')} />
                     <Input label='Realm' type="text" onChange={this.handleInputChange.bind (this, 'realm')} />
@@ -28,6 +28,7 @@ var CharacterView = React.createClass ({
                 </div>
                 <div>
                     <h3><small>Basic Information</small></h3>
+                    {this.renderCharacterThumbnail()}
                     <List items={this.getListItems()} />
                 </div>
             </div>
@@ -61,6 +62,11 @@ var CharacterView = React.createClass ({
     refreshCharacterInfo: function (character) {
 
         this.setState({character: character});
+    },
+
+    renderCharacterThumbnail: function() {
+
+        return <img  className="img-thumbnail" src="???" alt="Character thumbnail">;
     },
 
     getListItems: function () {

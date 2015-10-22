@@ -19,6 +19,8 @@ var RealmView = React.createClass ({
         return (
             <div>
                 <div>
+                    <h3><u>Check realm status</u></h3>
+                    <p>Press the button to check the realm status.</p>
                     <Button {...this.getButtonProps()} />
                 </div>
                 <div>

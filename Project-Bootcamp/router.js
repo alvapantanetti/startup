@@ -8,6 +8,8 @@ module.exports = ( function () {
     var HeaderView = require ('./views/header-view');
     var RealmView = require ('./views/realm-view');
     var CharacterView = require ('./views/character-view');
+    var ChallengerView = require ('./views/challenger-view');
+    var PvpView = require ('./views/pvp-view');
 
     var ModuleRouter = function () {
 
@@ -17,6 +19,8 @@ module.exports = ( function () {
                 <Route name='Home' path='home/' handler={HeaderView} />
                 <Route name='RealmStatus' path='realm/' handler={RealmView} />
                 <Route name='CharacterInformation' path='character/' handler={CharacterView} />
+                <route name='ChallengerChart' path='challenger/' handler={ChallengerView} />
+                <route name='PvpChart' path='pvp/' handler={PvpView} />
             </Route>
         );
     };

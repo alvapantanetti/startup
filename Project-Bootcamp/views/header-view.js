@@ -21,6 +21,12 @@ var HeaderView = React.createClass ({
                     <li>
                         <Link to='CharacterInformation' >Character Information</Link>
                     </li>
+                    <li>
+                        <Link to='ChallengerChart' >Challenger Leaderboards</Link>
+                    </li>
+                    <li>
+                        <Link to='PvpChart' >PvP Leaderboards</Link>
+                    </li>
                 </ul>
                 <div className='row' >
                     <RouteHandler />
