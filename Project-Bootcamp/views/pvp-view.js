@@ -8,19 +8,17 @@ var BlizzardAPI = require ('../querys/query');
 var PvpView = React.createClass ({
 
     getInitialState: function () {
-
         return {
             pvp: []
         }
     },
 
     render: function () {
-
         return (
             <div>
                 <div>
                     <h3><u>Top 10 pvp leaderboard</u></h3>
-                    <p>Fill the bracket, and then press the button to checkout the pvp leaderboards.</p>
+                    <p>Fill the bracket (2v2, 3v3, 5v5, rbg),then click the button to checkout the pvp leaderboards.</p>
                     <Input label="Bracket" type="text" onChange{this.handleInputChange.bind (this, 'bracket')} />
                     <Button {this.getButtonProps()} />
                 </div>
@@ -32,7 +30,6 @@ var PvpView = React.createClass ({
     },
 
     handleInputChange: function () {
-
         var newState = {};
 
             if  (event.target.value){
@@ -42,21 +39,18 @@ var PvpView = React.createClass ({
     },
 
     getButtonProps: function () {
-
         return {
             className: 'btn btn-info',
             onClick: this.handlePvpRequest,
             value: 'PvP Top 10'
-            }
+        }
     },
 
     handlePvpRequest: function () {
-
         BlizzardAPI.PvPLeaderboard(this.bracket, this.refreshPvpLeaderboard);
     },
 
     refreshPvpLeaderboard: function (pvp) {
-
         this.setState({pvp: pvp});
     }
 });

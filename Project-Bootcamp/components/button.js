@@ -24,8 +24,8 @@ var Button = React.createClass({
     },
 
     handleClick: function (event) {
-        if(this.props.onClick) {
-            this.props.onClick(event)
+        if (this.props.onClick) {
+            this.props.onClick(event);
         }
     }
 });

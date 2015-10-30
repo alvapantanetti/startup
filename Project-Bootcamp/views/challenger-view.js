@@ -9,14 +9,12 @@ var BlizzardAPI = require ('../querys/query');
 var ChallengerView = React.createClass({
 
     getInitialState: function () {
-
         return {
             challengers: []
         }
     },
 
     render: function () {
-
         return (
             <div>
                 <div>
@@ -33,7 +31,6 @@ var ChallengerView = React.createClass({
     },
 
     handleInputChange: function () {
-
         var newState = {};
 
         if  (event.target.value){
@@ -43,7 +40,6 @@ var ChallengerView = React.createClass({
     },
 
     getButtonProps: function () {
-
         return{
             className: 'btn btn-info',
             onClick: this.handleChallengerRequest,
@@ -52,12 +48,10 @@ var ChallengerView = React.createClass({
     },
 
     handleChallengerRequest: function () {
-
         BlizzardAPI.ChallengerLeaderboard(this.realm, this.refreshChallengerLeaderboard);
     },
 
     refreshChallengerLeaderboard: function (challengers) {
-
         this.setState({challengers: challengers});
     }
 });

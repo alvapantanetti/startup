@@ -12,7 +12,6 @@ module.exports = ( function () {
     var PvpView = require ('./views/pvp-view');
 
     var ModuleRouter = function () {
-
         this.routes = (
             <Route handler={MainView}>
                 <DefaultRoute handler={HeaderView} />
@@ -26,9 +25,7 @@ module.exports = ( function () {
     };
 
     ModuleRouter.prototype.run = function (mountElement) {
-
         Router.run (this.routes, function (Root) {
-
             React.render (<Root />, mountElement);
         });
     };

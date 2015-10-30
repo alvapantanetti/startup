@@ -8,7 +8,6 @@ var RouteHandler = Router.RouteHandler;
 var HeaderView = React.createClass ({
 
     render: function () {
-
         return (
             <div {...this.getProps()}>
                 <ul className='nav navbar-nav'>
@@ -34,15 +33,14 @@ var HeaderView = React.createClass ({
             </div>
         )
     },
-    getProps: function () {
 
+    getProps: function () {
         return {
             className: this.getClass()
         }
     },
 
     getClass: function () {
-
         var classes = {
             'style-type': true
         };

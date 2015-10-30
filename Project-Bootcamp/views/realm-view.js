@@ -8,14 +8,12 @@ var BlizzardAPI = require ('../querys/query');
 var RealmView = React.createClass ({
 
     getInitialState: function () {
-
         return {
             realms: []
         }
     },
 
     render: function () {
-
         return (
             <div>
                 <div>
@@ -31,7 +29,6 @@ var RealmView = React.createClass ({
     },
 
     getButtonProps: function () {
-
         return {
             className: 'btn btn-info',
             onClick: this.handleRealmRequest,
@@ -40,12 +37,10 @@ var RealmView = React.createClass ({
     },
 
     handleRealmRequest: function () {
-
         BlizzardAPI.RealmStatus(this.refreshRealms);
     },
 
-    refreshRealms: function (realms) { //this catchs the callback from the query RealmStatus
-
+    refreshRealms: function (realms) {
         this.setState({realms: realms})
     }
 });

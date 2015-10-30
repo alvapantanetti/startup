@@ -10,7 +10,6 @@ var CharacterView = require ('./character-view');
 var MainView = React.createClass ({
 
     render: function () {
-
         return (
             <div {...this.getProps()}>
                 <div className='row'>
@@ -23,14 +22,12 @@ var MainView = React.createClass ({
     },
 
     getProps: function () {
-
         return {
             className: this.getClass()
         }
     },
 
     getClass: function () {
-
         var classes = {
             'main-view': true,
             'container-fluid': true

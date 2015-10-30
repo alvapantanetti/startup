@@ -9,14 +9,12 @@ var BlizzardAPI = require ('../querys/query');
 var CharacterView = React.createClass ({
 
     getInitialState: function () {
-
         return {
             character: {}
         }
     },
 
     render: function () {
-
         return (
             <div>
                 <div>
@@ -36,7 +34,6 @@ var CharacterView = React.createClass ({
     },
 
     handleInputChange: function (type, event) {
-
         var newState = {};
 
         if  (event.target.value){
@@ -46,7 +43,6 @@ var CharacterView = React.createClass ({
     },
 
     getButtonProps: function () {
-
         return {
             className: 'btn btn-info',
             onClick: this.handleCharacterRequest,
@@ -55,22 +51,22 @@ var CharacterView = React.createClass ({
     },
 
     handleCharacterRequest: function () {
-
         BlizzardAPI.CharacterInfo(this.state.realm, this.state.name, this.refreshCharacterInfo);
     },
 
     refreshCharacterInfo: function (character) {
-
         this.setState({character: character});
     },
 
-    renderCharacterThumbnail: function() {
-
-        return <img  className="img-thumbnail" src="???" alt="Character thumbnail">;
+    renderCharacterThumbnail: function () {
+        var thumbnailSrc = (this.props.character.thumbnail) ? 'http://us.battle.net/static-render/us/' +
+                                                            this.props.character.thumbnail : 'defaultPath';
+        return (
+            <img  className="img-thumbnail" src={thumbnailSrc} alt="Character thumbnail" />
+        );
     },
 
     getListItems: function () {
-
         return null;
     }
 });
