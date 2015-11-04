@@ -13,13 +13,12 @@ module.exports = ( function () {
 
     var ModuleRouter = function () {
         this.routes = (
-            <Route handler={MainView}>
-                <DefaultRoute handler={HeaderView} />
-                <Route name='Home' path='home/' handler={HeaderView} />
-                <Route name='RealmStatus' path='realm/' handler={RealmView} />
-                <Route name='CharacterInformation' path='character/' handler={CharacterView} />
-                <route name='ChallengerChart' path='challenger/' handler={ChallengerView} />
-                <route name='PvpChart' path='pvp/' handler={PvpView} />
+            <Route path='/' handler={MainView}>
+                <DefaultRoute  name='home' path='home/' handler={HeaderView} />
+                <Route name='realm-status' path='realm/' handler={RealmView} />
+                <Route name='character-information' path='character/' handler={CharacterView} />
+                <route name='challenger-chart' path='challenger/' handler={ChallengerView} />
+                <route name='pvp-chart' path='pvp/' handler={PvpView} />
             </Route>
         );
     };

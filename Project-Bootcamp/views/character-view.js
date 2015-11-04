@@ -18,16 +18,15 @@ var CharacterView = React.createClass ({
         return (
             <div>
                 <div>
-                    <h3><u>Character basic information form</u></h3>
+                    <h3>Character basic information form</h3>
                     <p>Fill the form with the character name and realm.</p>
-                    <Input label='Name' type="text" onChange={this.handleInputChange.bind (this, 'name')} />
-                    <Input label='Realm' type="text" onChange={this.handleInputChange.bind (this, 'realm')} />
+                    <Input label='Name' type='text' onChange={this.handleInputChange.bind(this, 'name')} />
+                    <Input label='Realm' type='text' onChange={this.handleInputChange.bind(this, 'realm')} />
                     <Button {...this.getButtonProps()} />
                 </div>
                 <div>
                     <h3><small>Basic Information</small></h3>
-                    {this.renderCharacterThumbnail()}
-                    <List items={this.getListItems()} />
+                    <List  /> TODO:borre-la-llamada-al-metodo-get-list-items
                 </div>
             </div>
         )
@@ -51,11 +50,15 @@ var CharacterView = React.createClass ({
     },
 
     handleCharacterRequest: function () {
+        console.log(this.state.realm);
+        console.log(this.state.name);
         BlizzardAPI.CharacterInfo(this.state.realm, this.state.name, this.refreshCharacterInfo);
     },
 
     refreshCharacterInfo: function (character) {
+        console.log(character);
         this.setState({character: character});
+        {this.renderCharacterThumbnail()};
     },
 
     renderCharacterThumbnail: function () {
@@ -66,9 +69,9 @@ var CharacterView = React.createClass ({
         );
     },
 
-    getListItems: function () {
-        return null;
-    }
+    //getListItems: function () {
+    //
+    //}
 });
 
 module.exports = CharacterView;

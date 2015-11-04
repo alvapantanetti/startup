@@ -17,10 +17,10 @@ var PvpView = React.createClass ({
         return (
             <div>
                 <div>
-                    <h3><u>Top 10 pvp leaderboard</u></h3>
+                    <h3>Top 10 pvp leaderboard</h3>
                     <p>Fill the bracket (2v2, 3v3, 5v5, rbg),then click the button to checkout the pvp leaderboards.</p>
-                    <Input label="Bracket" type="text" onChange{this.handleInputChange.bind (this, 'bracket')} />
-                    <Button {this.getButtonProps()} />
+                    <Input label='Bracket' type='text' onChange={this.handleInputChange.bind(this, 'bracket')} />
+                    <Button {...this.getButtonProps()} />
                 </div>
                 <div>
                     <Table rows={this.state.pvp} columns={['top', 'character']} />
@@ -32,9 +32,9 @@ var PvpView = React.createClass ({
     handleInputChange: function () {
         var newState = {};
 
-            if  (event.target.value){
-                    newState[type] = event.target.value;
-                    this.setState(newState);
+            if (event.target.value){
+                newState[type] = event.target.value;
+                this.setState(newState);
             }
     },
 

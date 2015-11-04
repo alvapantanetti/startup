@@ -12,19 +12,19 @@ var HeaderView = React.createClass ({
             <div {...this.getProps()}>
                 <ul className='nav navbar-nav'>
                     <li>
-                        <Link to='Home' >Home</Link>
+                        <Link to='home' >Home</Link>
                     </li>
                     <li>
-                        <Link to='RealmStatus' >Realm Status</Link>
+                        <Link to='realm-status' >Realm Status</Link>
                     </li>
                     <li>
-                        <Link to='CharacterInformation' >Character Information</Link>
+                        <Link to='character-information' >Character Information</Link>
                     </li>
                     <li>
-                        <Link to='ChallengerChart' >Challenger Leaderboards</Link>
+                        <Link to='challenger-chart' >Challenger Leaderboards</Link>
                     </li>
                     <li>
-                        <Link to='PvpChart' >PvP Leaderboards</Link>
+                        <Link to='pvp-chart' >PvP Leaderboards</Link>
                     </li>
                 </ul>
                 <div className='row' >

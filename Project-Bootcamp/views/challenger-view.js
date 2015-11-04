@@ -18,10 +18,10 @@ var ChallengerView = React.createClass({
         return (
             <div>
                 <div>
-                    <h3><u>Top 10 challenger leaderboard</u></h3>
+                    <h3>Top 10 challenger leaderboard</h3>
                     <p>Fill the realm, and then press the button to checkout the challenger leaderboards.</p>
-                    <Input label="Realm" type="text" onChange{this.handleInputChange.bind (this, 'realm')} />
-                    <Button {this.getButtonProps()} />
+                    <Input label="Realm" type="text" onChange={this.handleInputChange.bind(this, 'realm')} />
+                    <Button {...this.getButtonProps()} />
                 </div>
                 <div>
                     <Table rows={this.state.challengers} columns={['top', 'character']} />
